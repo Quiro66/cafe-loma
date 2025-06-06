@@ -1,0 +1,389 @@
+/* Global styles: Basic reset and font */
+* {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+/* --- Header Section Styles --- */
+header {
+    font-weight: 600;
+    color: #f3f3f3;
+    background-color: #100815;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows navigation items to wrap on smaller screens */
+    padding: 10px;
+}
+
+/* Header navigation links */
+nav a {
+    font-weight: 600;
+    color: #f3f3f3;
+    padding: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* --- Main Hero Section Styles --- */
+main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #472c4f;
+}
+
+/* Main content container with background image and shadow */
+.container-main {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end; /* Aligns content to the bottom */
+    text-align: center;
+    font-size: 20px;
+    color: #f3f3f3;
+    background-image: url(./src/fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
+}
+
+/* --- Services Section Styles --- */
+.container-section {
+    width: 100%;
+    height: auto; /* Height adjusts to content */
+    background-color: #fdf6ff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default 3 columns for desktop */
+    justify-items: center;
+    align-items: center;
+    gap: 30px; /* Space between grid items */
+    padding: 30px 15px;
+}
+
+/* Individual service card styles */
+.section-item {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    background-color: #faeaff;
+    border-radius: 20px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    transition: transform 0.7s ease; /* Smooth hover effect */
+    border: 4px solid #1f1123;
+    padding-bottom: 20px;
+}
+
+/* Images within service cards */
+.section-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+/* Zoom effect on card hover */
+.section-item:hover {
+    transform: scale(1.05);
+}
+
+/* Text info inside service cards */
+.item-info {
+    padding: 15px;
+    text-align: center;
+    font-size: small;
+}
+
+/* --- About Section Styles --- */
+.section-about {
+    width: 100%;
+    height: auto;
+    background-color: #fdf6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    padding: 30px 15px;
+}
+
+/* Information block in the About section */
+.item-information-about {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    min-height: 50vh;
+    background-color: #1f1123;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Title for the About section */
+.about-title {
+    font-size: 2rem;
+    color: #f3f3f3;
+    margin-bottom: 15px;
+}
+
+/* Description text in the About section */
+.content {
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 100;
+    color: #f3f3f3;
+}
+
+/* Map container in the About section */
+.item-map {
+    width: 90%;
+    max-width: 700px;
+    height: 40vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* Map iframe styling */
+.item-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+/* --- Footer Section Styles --- */
+footer {
+    background-color: #100815;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Footer main title */
+footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer paragraph text */
+footer p {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Footer links */
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+/* Footer link hover effect */
+footer a:hover {
+    color: #c39b77;
+}
+
+/* Social icons container in footer */
+.social-icons {
+    margin-bottom: 0.8rem;
+}
+
+/* Social icon individual styling */
+.social-icons a {
+    font-size: 1.3rem;
+    margin: 0 8px;
+}
+
+/* Footer copyright text */
+footer::after {
+    content: "© 2025 Café de la Loma. All rights reserved.";
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+}
+
+/* ======================================================= */
+/* --- Media Queries for Responsiveness --- */
+/* ======================================================= */
+
+/* Styles for Tablets (screen width between 768px and 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        height: 8vh;
+    }
+
+    nav a {
+        padding: 0 15px;
+        font-size: 1.1rem;
+    }
+
+    .container-main {
+        font-size: 22px;
+        width: 95%;
+    }
+
+    .container-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 25px;
+        padding: 25px 15px;
+    }
+
+    .section-item {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .section-item img {
+        max-height: 250px;
+    }
+
+    .item-info {
+        font-size: medium;
+    }
+
+    .section-about {
+        flex-direction: column; /* Stacks elements vertically */
+        gap: 25px;
+        padding: 25px 15px;
+    }
+
+    .item-information-about {
+        width: 95%;
+        height: auto;
+        min-height: 40vh;
+    }
+
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .content {
+        font-size: 1.2rem;
+    }
+
+    .item-map {
+        width: 95%;
+        height: 45vh;
+    }
+
+    footer h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Styles for Mobile Phones (screen width up to 767px) */
+@media (max-width: 767px) {
+    header {
+        height: auto;
+        padding: 10px 5px;
+        flex-direction: column; /* Stacks header content vertically */
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+        display: block; /* Each nav link on its own line */
+    }
+
+    main {
+        height: 80vh;
+    }
+
+    .container-main {
+        font-size: 18px;
+        width: 95%;
+        padding-bottom: 15px;
+    }
+
+    .container-section {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .section-item {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .section-item img {
+        max-height: 200px;
+    }
+
+    .item-info {
+        font-size: small;
+    }
+
+    .section-about {
+        flex-direction: column; /* Ensures vertical stacking */
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .item-information-about {
+        width: 100%;
+        height: auto;
+        min-height: 35vh;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .item-map {
+        width: 100%;
+        height: 30vh;
+        border-radius: 10px;
+    }
+
+    footer {
+        padding: 1rem 0.5rem;
+    }
+
+    footer h2 {
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 5px;
+    }
+}
+
+/* quiro66 */
